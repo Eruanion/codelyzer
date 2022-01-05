@@ -181,7 +181,7 @@ namespace Codelyzer.Analysis
         {
             if (AnalyzerConfiguration.ExportSettings.GenerateJsonOutput)
             {
-                FileUtils.CreateDirectory(AnalyzerConfiguration.ExportSettings.OutputPath);
+                Directory.CreateDirectory(AnalyzerConfiguration.ExportSettings.OutputPath);
                 foreach (var analyzerResult in analyzerResults)
                 {
                     Logger.LogDebug("Generating Json file for " + analyzerResult.ProjectResult.ProjectName);
